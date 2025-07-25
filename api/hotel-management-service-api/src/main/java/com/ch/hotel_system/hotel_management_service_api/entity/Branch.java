@@ -9,7 +9,7 @@ import java.util.List;
 @Table(name="branch")
 public class Branch {
     @Id
-    @Column(name="branch_id")
+    @Column(name="branch_id",length = 80)
     private String branchId;
 
     @Column(name="room_count")
