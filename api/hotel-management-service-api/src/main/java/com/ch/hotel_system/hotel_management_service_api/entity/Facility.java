@@ -6,9 +6,13 @@ import jakarta.persistence.*;
 @Table(name="facility")
 public class Facility {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//id is auto incremented
-    private Long roomId;
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private long id;
 
     @Column(name = "name",nullable = false,length = 100)
     private String name;
+
+    @ManyToOne()
+    @JoinColumn(name = "room_id")
+    private Room room;
 }
