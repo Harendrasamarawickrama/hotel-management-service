@@ -1,0 +1,13 @@
+package com.ch.hotel_system.hotel_management_service_api.service;
+
+import com.ch.hotel_system.hotel_management_service_api.dto.request.RequestFacilityDto;
+import com.ch.hotel_system.hotel_management_service_api.dto.response.ResponseFacilityDto;
+import com.ch.hotel_system.hotel_management_service_api.dto.response.paginate.FacilityPaginateResponseDto;
+
+public interface FacilityService {
+    public void create(RequestFacilityDto dto);
+    public void update(RequestFacilityDto dto,String facilityId);
+    public void delete(String facilityId);
+    public ResponseFacilityDto findById(String facilityId);
+    public FacilityPaginateResponseDto findAll(int page, int size,String roomId);
+}
